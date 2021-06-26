@@ -1,0 +1,21 @@
+﻿@model Article
+<h3>Add Article</h3>
+
+@using (@Html.BeginForm("Add", "Article"))
+{
+    <div class="row">
+        <div class="col-6">
+            <h5>Article ID</h5>
+            @Html.TextBoxFor(model => Model.ArticleId, new { @maxlength = "50" })
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <h5>Article Name</h5>
+            @Html.TextBoxFor(model => Model.ArticleName, new { @maxlength = "100" })
+        </div>
+    </div>
+    <div>
+        <button type="submit" id="Add" value="Add">Add Article</button>
+    </div>
+}
